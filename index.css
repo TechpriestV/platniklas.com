@@ -211,6 +211,7 @@ h1 {
         width: 16vw;
         border-radius: 4px;
 
+
         & h2{
           text-align: center;
           margin-top: -2em;
@@ -235,9 +236,17 @@ h1 {
           list-style: none;
           margin: 0;
           margin-bottom: 1em;
-          padding-left: 1em;
+          padding-left: 0.5em;
           & li {
             margin-left: 0;
+          }
+        }
+        & .contact {
+          margin-left: 4px;
+          margin-bottom: 4px;
+          & a {
+            text-decoration: none;
+            color: var(--text-color)
           }
         }
       }
@@ -315,16 +324,23 @@ h1 {
     background-image: linear-gradient(to right,
                                       #0000,
                                       var(--bg-color)),
-                      url('./images/first.jpg');
+                      url('');
   }
   & .right {
-    background-image: linear-gradient(to right,
+    background-image: linear-gradient(to left,
                                       #0000,
                                       var(--bg-color)),
-                      url('./images/first.jpg');
+                      url('');
   }
 }
 footer {
   display: flex;
-  height: 5em;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3em;
+  height: 2em;
+  width: 80vw;
+  & div {
+    width: 20vw;
+  }
 }
