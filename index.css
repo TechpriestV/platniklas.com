@@ -1,0 +1,239 @@
+:root {
+  --bg-color: pink;
+  --text-color: white;
+  --primary-color: orange;
+  --secondary-color: yellow;
+}
+body {
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--text-color);
+  background-color: var(--bg-color);
+
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+#splashscreen {
+  width: 100vw;
+  height: 100vh;
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & h1{
+    font-size: 80px;
+  }
+  & a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 90vh;
+    margin-left: auto;
+    margin-right: auto;
+
+    color: var(--text-color);
+
+    text-decoration: none;
+    font-size: 40px;
+
+    text-align: center;
+  }
+}
+
+.video {
+  width: 100%;
+  height: 400px;
+
+  background-color: #5b5b5b;
+}
+
+.banner {
+  width: 100vw;
+  height: 20vh;
+}
+
+#about {
+  width: 100vw;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--bg-color);
+
+  & p,
+   h1{
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  & #about-left {
+    height: 100vh;
+    width: 30vw;
+    background-image: linear-gradient(to right,
+                                      #0000,
+                                      var(--bg-color)),
+                      url();
+  }
+  & #about-right {
+    height: 100vh;
+    width: 30vw;
+    background-image: linear-gradient(to left,
+                                      #0000,
+                                      var(--bg-color)),
+                      url();
+  }
+}
+#anton {
+  background-image: url('./images/anton_on.jpg');
+  background-size: contain;
+  &:hover {
+    background-image: url('/images/anton_off.jpg');
+  }
+}
+#ceder {
+  background-image: url('./images/ceder_on.jpg');
+  background-size: contain;
+  &:hover {
+    background-image: url('/images/ceder_off.jpg');
+  }
+}
+#lilo {
+  background-image: url('./images/lilo_on.jpg');
+  background-size: contain;
+  &:hover {
+    background-image: url('/images/lilo_off.jpg');
+  }
+
+}
+#olivia {
+  background-image: url('/images/olivia_on.jpg');
+  background-size: contain;
+  &:hover {
+    background-image: url('/images/olivia_off.jpg');
+  }
+}
+#petra {
+  background-image: url('./images/petra_on.jpg');
+  background-size: contain;
+  &:hover {
+    background-image: url('/images/petra_off.jpg');
+  }
+}
+#project-description {
+  width: 40vw;
+  background-color: pink;
+}
+#us{
+  width: 100vw;
+
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & h1 {
+    width: 80vw;
+    text-align: left;
+  }
+
+  & #quote {
+    width: 100vw;
+    height: 40vh;
+
+    font-size: 2em;
+
+    font-style: italic;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  & #members {
+    display: flex;
+
+    width: 80vw;
+
+    & .member {
+      width: 20vw;
+
+      & .portrait{
+        width: 100%;
+        padding-top: 100%;
+
+        position: relative;
+        /* background-color: pink; */
+      }
+
+      & .portrait:hover {
+        /* background-color: red; */
+      }
+      & .portrait:hover ~ div {
+        display: block;
+        background-color: grey;
+      }
+
+      & .description {
+        display: none;
+        position: absolute;
+        width: inherit;
+      }
+    }
+  }
+}
+#making {
+
+  & .content {
+    width: 30vw;
+    height: 30vw;
+  }
+  & #method {
+    display: flex;
+
+    & .image {
+      width: 60vw;
+      height: 30vw;
+      background-color: green;
+
+    }
+  }
+
+  & #tech {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    & .left {
+      background-image: url();
+      background-color: green;
+    }
+    & .right {
+      background-image: url();
+      background-color: green;
+    }
+  }
+
+  & #lessons {
+    display: flex;
+
+    & .image {
+      width: 60vw;
+      height: 30vw;
+
+      background-color: green;
+    }
+  }
+}
+footer {
+  height: 5em;
+}

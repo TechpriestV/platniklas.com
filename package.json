@@ -1,0 +1,25 @@
+{
+  "name": "platniklas",
+  "version": "1.0.0",
+  "description": "A homepage for the AGI18 project Plåtniklas",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "postcss": "postcss --config postcss.json"
+  },
+  "author": "Viktor Ceder",
+  "license": "MIT",
+  "dependencies": {
+    "loadjs": "^3.5.4",
+    "postcss": "^7.0.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.3.1",
+    "postcss-extend": "^1.0.5",
+    "postcss-import": "^12.0.1",
+    "postcss-mixins": "^6.2.0",
+    "postcss-nested": "^4.1.0",
+    "postcss-simple-vars": "^5.0.1"
+  }
+}
