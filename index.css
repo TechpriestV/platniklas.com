@@ -105,42 +105,28 @@ h1 {
     background-size: cover;
   }
 }
+
 #anton {
   background-image: url('./images/anton_on.jpg');
   background-size: contain;
-  &:hover {
-    background-image: url('./images/anton_off.jpg');
-  }
 }
 #ceder {
   background-image: url('./images/ceder_on.jpg');
   background-size: contain;
-  &:hover {
-    background-image: url('./images/ceder_off.jpg');
-  }
 }
 #lilo {
   background-image: url('./images/lilo_on.jpg');
   background-size: contain;
-  &:hover {
-    background-image: url('./images/lilo_off.jpg');
-  }
-
 }
 #olivia {
   background-image: url('./images/olivia_on.jpg');
   background-size: contain;
-  &:hover {
-    background-image: url('./images/olivia_off.jpg');
-  }
 }
 #petra {
   background-image: url('./images/petra_on.jpg');
   background-size: contain;
-  &:hover {
-    background-image: url('./images/petra_off.jpg');
-  }
 }
+
 #project-description {
   width: 40vw;
   background-color: var(--bg-color);
@@ -188,6 +174,22 @@ h1 {
       &:hover > div {
         display: block;
         background-color: grey;
+
+      }
+      &:hover > #anton {
+        background-image: url('./images/anton_off.jpg');
+      }
+      &:hover > #ceder {
+        background-image: url('./images/ceder_off.jpg');
+      }
+      &:hover > #lilo {
+        background-image: url('./images/lilo_off.jpg');
+      }
+      &:hover > #olivia {
+        background-image: url('./images/olivia_off.jpg');
+      }
+      &:hover > #petra {
+        background-image: url('./images/petra_off.jpg');
       }
 
       & .portrait{
@@ -195,14 +197,12 @@ h1 {
         padding-top: 100%;
 
         position: relative;
-        /* background-color: pink; */
       }
 
       & .portrait:hover {
-        /* background-color: red; */
-      }
-      & .portrait:hover ~ div {
-        display: block;
+        & #ceder{
+          background-image: linear-gradient(#333, #000);
+        }
       }
 
       & .description {
@@ -311,7 +311,20 @@ h1 {
   & .content{
     width: 40vw;
   }
+  & .left {
+    background-image: linear-gradient(to right,
+                                      #0000,
+                                      var(--bg-color)),
+                      url('./images/first.jpg');
+  }
+  & .right {
+    background-image: linear-gradient(to right,
+                                      #0000,
+                                      var(--bg-color)),
+                      url('./images/first.jpg');
+  }
 }
 footer {
+  display: flex;
   height: 5em;
 }
