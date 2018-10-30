@@ -106,7 +106,7 @@ h1 {
   background-image: url('./images/anton_on.jpg');
   background-size: contain;
   &:hover {
-    background-image: url('/images/anton_off.jpg');
+    background-image: url('./images/anton_off.jpg');
   }
 }
 #ceder {
