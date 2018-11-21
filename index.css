@@ -406,6 +406,7 @@ h1 {
 
     background-color: grey;
 
+
   }
 
   & .content {
@@ -414,6 +415,18 @@ h1 {
   }
   & #method {
     display: flex;
+
+    @media (max-width: 500px){
+      flex-direction: column;
+      & div:first-of-type{
+        height: 10vh;
+      }
+      & .content{
+        width: 100vw;
+        height: 40vh;
+      }
+
+    }
 
     & .image {
       width: 60vw;
@@ -427,6 +440,14 @@ h1 {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    @media (max-width: 500px){
+      flex-direction: column;
+      & .content{
+        width: 100vw;
+        height: 40vh;
+      }
+
+    }
 
     & .left {
       /* background-image: url(); */
@@ -440,6 +461,18 @@ h1 {
 
   & #lessons {
     display: flex;
+    @media (max-width: 500px){
+      flex-direction: column;
+      & .content{
+        width: 100vw;
+        height: 40vh;
+
+      }
+      & div:last-of-type{
+        height: 80vh;
+      }
+
+    }
 
     & .image {
       width: 60vw;
@@ -449,6 +482,7 @@ h1 {
     }
   }
 }
+
 #related {
   display: flex;
 
