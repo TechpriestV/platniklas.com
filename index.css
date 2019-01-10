@@ -436,6 +436,8 @@ h1 {
   & .content {
     width: 30vw;
     height: 30vw;
+
+    overflow-x: scroll;
   }
   & #method {
     display: flex;
@@ -443,7 +445,7 @@ h1 {
     @media (max-width: 500px){
       flex-direction: column;
       & div:first-of-type{
-        height: 10vh;
+        /* height: 10vh; */
       }
       & .content{
         width: 100vw;
@@ -541,10 +543,19 @@ footer {
   align-items: center;
   justify-content: space-between;
   margin-top: 3em;
+  margin-bottom: 2em;
   height: 2em;
   width: 80vw;
   & div {
     width: 20vw;
+    white-space: nowrap;
+    & a {
+      text-decoration: none;
+      color: var(--text-color)
+    }
+  }
+  & .copyright {
+    text-align: center;
   }
 }
 
