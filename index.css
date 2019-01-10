@@ -30,6 +30,11 @@ h1, h2, h3, h4, h5 {
   color: var(--secondary-color);
 }
 
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
 .crop {
   overflow: hidden;
 }
@@ -520,6 +525,10 @@ h1 {
     width: 40vw;
     padding-left: 10px;
     padding-right: 10px;
+
+    @media (max-width: 500px){
+      width: auto;
+    }
   }
   & .left {
     background-position: center;
