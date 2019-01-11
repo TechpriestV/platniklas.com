@@ -43,10 +43,93 @@ h1 {
   text-shadow: 2px 2px #000;
 }
 
+@keyframes helicopter {
+  from {
+    transform: rotate(0deg)
+               translate(-15px)
+               rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg)
+               translate(-15px)
+               rotate(-360deg);
+  }
+}
+
+#city {
+  background-image: url('./images/City.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100vw;
+  height: 100vh;
+  background-position: bottom;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+#mountains {
+  background-image: url('./images/Berg.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+
+  width: 100vw;
+  height: 100vh;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+#helicopters {
+  background-image: url('./images/Heli.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+
+  width: 100vw;
+  height: 100vh;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+
+  animation: helicopter 10s infinite linear;
+}
+
+#explosion {
+  background-image: url('./images/Boom.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+
+  width: 100vw;
+  height: 100vh;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+#city,
+#mountains,
+#helicopters,
+#explosion {
+    @media (min-width: 500px){
+      background-size: cover;
+      background-position: 150%;
+    }
+}
+
 #splashscreen {
   width: 100vw;
   height: 100vh;
-  background-color: var(--bg-color);
+  /* background-color: var(--bg-color); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -429,7 +512,8 @@ h1 {
     text-align: right;
   }
 
-  & #makingof {
+  & #makingof,
+    #makingoftwo {
     width: 60vw;
     height: calc(60vw * 0.5625);
 
@@ -555,6 +639,8 @@ footer {
   margin-bottom: 2em;
   height: 2em;
   width: 80vw;
+
+
   & div {
     width: 20vw;
     white-space: nowrap;
@@ -565,6 +651,18 @@ footer {
   }
   & .copyright {
     text-align: center;
+  }
+  @media (max-width: 500px){
+    flex-direction: column;
+
+    & div {
+      width: 100%;
+      margin-bottom: 1.5em;
+    }
+    & :nth-child(1){order: 1;}
+    & :nth-child(2){order: 3;}
+    & :nth-child(3){order: 2;}
+
   }
 }
 
