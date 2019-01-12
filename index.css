@@ -601,7 +601,39 @@ h1 {
     }
   }
 }
+#contributions {
+width: 80vw;
+/* display: flex; */
+  & #flex {
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  & #imageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    & p {
+      margin-top: 0;
+    }
+    @media (min-width: 500px){
+      & img, p {
+        margin-left: 2em;
+      }
+    }
+  }
+  & .human {
+    width: 40vw;
+    & img {
+      width: 90%;
+    }
+    @media(max-width: 500px){
+      width: 80vw;
+    }
 
+  }
+}
 #related {
   display: flex;
 
