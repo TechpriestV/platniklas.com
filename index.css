@@ -298,6 +298,10 @@ h1 {
 }
 #goals {
   width: 60vw;
+
+  & img {
+    width: 100%;
+  }
 }
 #us{
   width: 100vw;
@@ -501,8 +505,8 @@ h1 {
   align-items: center;
 
   & p, h1 {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   & .comment {
